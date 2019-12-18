@@ -3,7 +3,7 @@ import Head from "next/head";
 export default () => (
   <>
     <Head>
-      <title>Sune Maute</title>
+      <title>Sune Flaute</title>
       <link
         rel="shortcut icon"
         type="image/png"
