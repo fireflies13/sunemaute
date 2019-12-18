@@ -1,5 +1,15 @@
+import Head from "next/head";
+
 export default () => (
   <>
+    <Head>
+      <title>Sune Maute</title>
+      <link
+        rel="shortcut icon"
+        type="image/png"
+        href="https://public.jonathanwieben.com/sune-heady.png"
+      ></link>
+    </Head>
     <div className="wrapper">
       <h1>sunemaute.com</h1>
       <main>
