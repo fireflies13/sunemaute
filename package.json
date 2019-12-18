@@ -2,6 +2,11 @@
   "name": "sunemaute",
   "repository": "https://github.com/fireflies13/sunemaute.git",
   "author": "Peer Maute",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
   "dependencies": {
     "nextjs": "^0.0.3",
     "react": "^16.12.0",
