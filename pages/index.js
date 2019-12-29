@@ -12,9 +12,9 @@ export default () => (
     </Head>
     <div className="wrapper">
       <h1>sunemaute.com</h1>
+      <h2> Eine Website zum Wphlfühlen</h2>
       <main>
 
-      // 123 Test, ob ich hier richtig bin.
         <p>
           Sie nennen mich cool, sie nennen mich hip.
           <br />
