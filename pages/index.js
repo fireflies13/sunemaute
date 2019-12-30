@@ -10,68 +10,141 @@ export default () => (
         href="https://public.jonathanwieben.com/sune-heady.png"
       ></link>
     </Head>
-    <div className="wrapper">
-      <h1>sunemaute.com</h1>
-      <h2> Eine Website zum Wphlfühlen</h2>
       <main>
 
-        <p>
-          Sie nennen mich cool, sie nennen mich hip.
-          <br />
-          Laber mich nicht an, oder Du bist rip.
-          <br />
-          Sie nennen mich cool, sie nennen mich knorke.
-          <br />
-          Sei mal nicht so hässlich, wenn ich mit Dir talke.
-        </p>
-        <img src="https://public.jonathanwieben.com/sune.jpg" />
+          <div class="bg_wrapper">
+          </div>
+
+          <a href="adventskalender.html">
+            <div class="item_left">
+              <p>Adventskalender</p>
+            </div>
+          </a>
+
+
+          <a href="graveyard_keeper.html">
+            <div class="item_mid" >
+              <p>Graveyard Keeper</p>
+            </div>
+          </a>
+
+          <a href="games.html">
+            <div class="item_right">
+              <p>Games</p>
+            </div>
+          </a>
+
       </main>
     </div>
     <style jsx global>{`
-      main {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        padding: 20px;
-      }
-      h1 {
-        color: #ff0008;
-        text-align: center;
-        font-size: 55px;
-        margin-top: 0;
-      }
-      p {
-        font-size: 25px;
-        color: orange;
-        margin-bottom: 60px;
-      }
-      img {
-        max-height: 600px;
-      }
-      .wrapper {
+
+      .bg_wrapper {
         padding-top: 20px;
         min-height: 100vh;
         width: 100vw;
-        background-image: url("https://public.jonathanwieben.com/black-orange-red-fire.jpeg");
+        background-image: url("../media/tree_lake.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        z-index: 1;
+        filter: blur(8px);
       }
-      body {
-        margin: 0;
-        padding: 0;
+
+      .item_mid {
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        border: 3px solid #f1f1f1;
+        position: absolute;
+        top: 50%;
+        left: 35%;
+        z-index: 2;
+        width: 25%;
+        padding: 20px;
+        padding-left:2%;
+        padding-right:2%;
+        text-align: center;
+
       }
-      @media (max-width: 800px) {
-        h1 {
-          font-size: 35px;
+      .item_left {
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        border: 3px solid #f1f1f1;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        z-index: 2;
+        width: 25%;
+        padding: 20px;
+        padding-left:2%;
+        padding-right:2%;
+        text-align: center;
+      }
+      .item_right {
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        border: 3px solid #f1f1f1;
+        position: absolute;
+        top: 50%;
+        left: 64.9%;
+        z-index: 2;
+        width: 25%;
+        padding: 20px;
+        padding-left:2%;
+        padding-right:2%;
+        text-align: center;
+      }
+
+      @media (max-width: 900px) {
+        .item_left {
+          top: 20%;
+          left: 20%;
+          width: 50%;
         }
-        main {
-          flex-direction: column;
+        .item_mid {
+          top: 45%;
+          left: 20%;
+          width: 50%;
         }
-        img {
-          width: 280px;
+        .item_right {
+          top: 70%;
+          left: 20%;
+          width: 50%;
         }
       }
+
+      @media (max-width:340px){
+        .item_left {
+          width: 166px;
+          left:20%;
+        }
+        .item_mid {
+          width: 166px;
+          left:20%;
+        }
+        .item_right {
+          width: 166px;
+          left:20%;
+        }
+      }
+
+      @media (max-height:500px) and (max-width: 900px){
+        .item_left {
+          top: 100px;
+        }
+        .item_mid{
+          top: 225px;
+        }
+        .item_right{
+          top: 350px;
+        }
+      }
+
     `}</style>
   </>
 );
