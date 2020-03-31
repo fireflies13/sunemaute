@@ -1,0 +1,40 @@
+#expend {
+  display:none;
+}
+
+#expend + .smalldesc {
+  max-height:20vh;
+  overflow:hidden;
+  transition:all 0.3s ease;
+	opacity: 0.5;
+}
+
+#expend:checked + .smalldesc {
+  max-height: 5000px;
+	transition:all 0.9s ease;
+	opacity: 1;
+}
+
+label {
+  color:blue;
+  text-decoration:underline;
+  cursor:pointer;
+
+	display: block;
+	width: inherit;
+	text-align: center;
+}
+
+label:hover {
+  text-decoration:none;
+}
+
+.wrapper {
+  padding: 100px;
+}
+
+.boxy {
+  padding: 20px 20px 0px 20px;
+  border-style: dotted;
+  background-color: orange;
+}

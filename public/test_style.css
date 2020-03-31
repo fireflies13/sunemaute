@@ -5,6 +5,12 @@
 .boxy {
   padding: 20px;
   border-style: dotted;
+  background-color: orange;
 }
 
+
+#myBtn {width: 100%;}
+
 #more {display: none;}
+#half-fade {opacity: 0.7;}
+#high-fade {opacity: 0.2;}
