@@ -14,9 +14,10 @@
 
   text-align: center;
   text-decoration:none;
-  line-height: 11px;
-  font-size: 11px;
+  line-height: 13px;
+  font-size: 12px;
   font-family: sans-serif;
+  padding-bottom: 3px;
   /* font-weight: bold; */
 }
 /* .HinwLbl:after {
