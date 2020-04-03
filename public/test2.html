@@ -2,8 +2,9 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Test2</title>
   <link rel="stylesheet" type="text/css" href="/test2_style.css" />
+  <script type="text/javascript" src="/test2.js"></script>
 
 </head>
 <body>
@@ -12,8 +13,8 @@
 
     <div class="boxy">
 
-        <input type="checkbox" id="expend1" />
-        <div class="smalldesc" id="sdsk1">
+      <input type="checkbox" id="expend1" onchange="handleChange(this, this.id);"/>
+        <div id="sdsk1">
         <p>
 
         <h3>Aktueller Hinweis</h3>
@@ -62,7 +63,7 @@
 
             </p>
           </div>
-      <label class="HinwLbl" for="expend1" id="hnwlbl_1">Read More</label>
+      <label class="HinwLbl" for="expend1" id="hnwlbl_1">Mehr lesen</label>
 
     </div>
 
@@ -73,8 +74,8 @@
     <div class="boxy">
 
 
-        <input type="checkbox" id="expend2" />
-        <div class="smalldesc2" id="sdsk2">
+        <input type="checkbox" id="expend2" onchange="handleChange(this, this.id);"/>
+        <div id="sdsk2">
         <p>
 
         <h3>Aktueller Hinweis</h3>
@@ -123,7 +124,7 @@
 
             </p>
           </div>
-        <label class="HinwLbl" for="expend2" id="hnwlbl_2">Read More</label>
+        <label class="HinwLbl" for="expend2" id="hnwlbl_2">Mehr lesen</label>
 
 
     </div>
