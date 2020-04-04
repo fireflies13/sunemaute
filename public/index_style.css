@@ -39,6 +39,44 @@ body{
   position: relative;
 }
 
+.text_box {
+
+  width: calc(100% - calc(7rem + 105px) - 1vw);
+  float: left;
+
+  /* padding-left:2vw;
+  padding-right:2vw; */
+
+  font-family: 'Gotu', sans-serif;
+  text-align: right;
+  padding-right: 1vw;
+  position: absolute;
+
+  display: none;
+
+  /* background-color: gray; */
+}
+#text_about {
+  /* visibility also set in window.onload ! */
+  visibility: hidden;
+
+  /* change width together with text_box.width ! */
+  width: calc(7rem + 105px - 0.5vw - 50px);
+  float: right;
+
+  padding-right: 50px;
+  padding-left: 0.5vw;
+
+  font-family: 'Gotu', sans-serif;
+  text-align: left;
+  font-style: italic;
+
+  /* border-left: 1px solid black; */
+  /* background-color: orange; */
+
+}
+
+
 
 #menu_checkbox {
   display: none;

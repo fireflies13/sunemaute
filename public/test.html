@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <title></title>
     <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/test_style.css" />
+    <link rel="stylesheet" type="text/css" href="test_style.css" />
+    <script type="text/javascript" src="test.js"></script>
+
+
   </head>
   <body>
     <div class="bg_wrapper">
@@ -14,16 +17,20 @@
 
       <label for="menu_checkbox" id="label_underscore">
         <div class="menu_bar">
-        <label for="a_home" id="label_home">
+          <!-- HOME -->
+        <label for="a_home" id="label_home" onclick="show_textbox(text_home)">
           <a class="menu_link" href="#" id="a_home">HOME</a>
         </label>
-        <label for="a_games" id="label_games">
+        <!-- GAMES -->
+        <label for="a_games" id="label_games" onclick="show_textbox(text_games)">
           <a class="menu_link" href="#" id="a_games">GAMES</a>
         </label>
-        <label for="a_picker" id="label_picker">
+        <!-- PICKER -->
+        <label for="a_picker" id="label_picker" onclick="show_textbox(text_picker)">
           <a class="menu_link" href="#" id="a_picker">PICKER</a>
         </label>
-        <label for="a_about" id="label_about_top">
+        <!-- ABOUT -->
+        <label for="a_about" id="label_about_top" onclick="toggle_about_textbox()">
         <label for="a_about" id="label_about_bot">
           <a class="menu_link" href="#" id="a_about">ABOUT</a>
         </label>
@@ -33,9 +40,19 @@
       </label>
 
 
+      <div class="text_box" id="text_home">
+        <p>Home ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
+      </div>
+      <div class="text_box" id="text_games">
+        <p>Games ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="text_box" id="text_picker">
+        <p>Picker ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="about_box" id="text_about">
+        <p>About ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
 
-<!--
-      <p style="font-family: 'Gotu', sans-serif; text-align: right; padding-right: 3vw;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
     </div>
   </body>
 </html>
