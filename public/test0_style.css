@@ -1,0 +1,59 @@
+#main a.collapse-button:hover {
+color: #4b4b4d;
+font-family: calibri;
+font-size: 26px;
+line-height: 26 px;
+	text-decoration: none;
+	background-repeat:no-repeat;
+	background-size: cover;
+	width:100%;
+	min-width:200px;
+	transition: border-color 400ms ease;
+	-moz-transition: border-color 400ms ease;
+	-webkit-transition: border-color 400ms ease;
+	-o-transition: border-color 400ms ease;
+}
+
+#main a.collapse-button, #main a.collapse-button:visited, #main a.collapse-button:focus, #main a.collapse-button:active {
+color: #4b4b4d;
+font-family: calibri;
+font-size: 26px;
+line-height: 26 px;
+	text-decoration: none;
+	background-repeat:no-repeat;
+	background-size: cover;
+	width:100%;
+	min-width:200px;
+	transition: border-color 400ms ease;
+	-moz-transition: border-color 400ms ease;
+	-webkit-transition: border-color 400ms ease;
+	-o-transition: border-color 400ms ease;
+}
+
+#main a.collapse-button::before {color: white; background: #46155D;}
+
+article .row ~ .row {
+	padding-top: 10px;
+	margin-top: 10px;
+}
+
+.collapse-box .row {
+	margin-right: 36px;
+	margin-left: 18px;
+margin-bottom: 18px;
+}
+
+.collapse-box, .collapse-button > span {text-align: left;}
+
+.collapse-box, .collapse-button > p {margin-left: 15px; margin-top: 10px;}
+ .Wechsel {
+padding: 0px;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-image: url('https://www.uni-goettingen.de/admin/bilder/pictures/880d42ad5abd52cd3669bbefa733e327.jpg');
+-webkit-transition:  800ms ease;
+transition: background-image 800ms ease;
+	-moz-transition: background-image 800ms ease;
+	-o-transition: background-image 800ms ease;
+}

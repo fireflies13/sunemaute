@@ -1,0 +1,45 @@
+.newGrid{
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (25%)[4];
+  grid-template-columns: repeat(4,25%);
+  grid-auto-rows: 1fr;
+
+  padding-inline-start: 0px;
+  list-style-type: none;
+}
+.newGrid li{
+  margin: 1vw;
+  overflow: hidden;
+}
+.Cell:hover .Graphic{
+  background-size: 110%;
+}
+.Graphic{
+  min-height: 118px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.SubTextBox{
+  background-color: #f3f3f3;
+  height: calc(100% - 118px);
+  min-height: 60px;
+}
+
+@media (max-width: 600px) {
+  .newGrid{
+    -ms-grid-columns: (50%)[2];
+    grid-template-columns: repeat(2,50%);
+  }
+}
+@media (min-width:601px) and (max-width:1083px){
+  .newGrid{
+    -ms-grid-columns: (33%)[3];
+    grid-template-columns: repeat(3,33%);
+  }
+}
+
+#ba_bubble_image{background-image: url(/ba_bubble.png);}
+#ma_bubble_image{background-image: url(/ma_bubble.png);}
+#phd_bubble_image{background-image: url(/phd_bubble.png);}
