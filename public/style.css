@@ -4,12 +4,13 @@ body{
 
 .bgWrapper {
   width: 100vw;
-  height: 900px;
+  height: 100vh;
+  min-height: 900px;
   background-image: url("fields-greyshape.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* position: absolute; */
+  position: absolute;
 }
 
 .header {
@@ -28,4 +29,5 @@ body{
   text-align: center;
   font-family: 'Gotu', sans-serif;
   font-style:italic;
+  font-weight: normal;
 }
