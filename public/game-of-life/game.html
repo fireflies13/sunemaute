@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/game.css"/>
+
+    <title>Game of Life</title>
+  </head>
+  <body>
+
+    <h1>The Game Of Life</h1>
+
+
+      <canvas id="golBoard"></canvas>
+
+      <br>
+      <br>
+
+      <div id="menuWrapper">
+        <button type="button" id="clearButton" onclick="clearGame()">Clear</button>
+        <span id="runCheck">
+          <label for="runCheckbox">
+            Run:
+            <input type="checkbox" id="runCheckbox"/>
+          </label>
+        </span>
+        <span id="freqBox">
+          <label for="tickFrequency">
+            Life cycle in ms:
+            <input type="number" id="tickFrequency" min="100" placeholder="500" max="10000" onchange="setTickLength(this.value)"/>
+          </label>
+        </span>
+      </div>
+
+
+
+
+    <script src="/game.js"></script>
+
+  </body>
+</html>
