@@ -2,15 +2,18 @@ const canvas = document.getElementById('golBoard');
 const ctx = canvas.getContext('2d');
 canvas.width = 800;
 canvas.height = 600;
-canvas.addEventListener('mouseup', function(e)
+var minHeight = 100;
+var minWidth = 100;
+canvas.addEventListener('mousedown', function(e)
 {
   handleCanvasClick(this, e);
 });
 
-const RESOLUTION = 20;
+var RESOLUTION = 20;
+var minRes = 5;
 
-const ROWS = canvas.height / RESOLUTION;
-const COLUMNS = canvas.width / RESOLUTION;
+var ROWS = canvas.height / RESOLUTION;
+var COLUMNS = canvas.width / RESOLUTION;
 
 
 const runBox = document.getElementById('runCheckbox');
@@ -25,7 +28,7 @@ var tickLength = 500;
 
 
 // --- MAIN ---
-const GRID = initGrid();
+var GRID = initGrid();
 console.log(GRID);
 
 draw(GRID);
@@ -60,6 +63,42 @@ function clearGame() {
 
 function setTickLength(value) {
   tickLength = value;
+}
+function setResolution(value) {
+  if (value < minRes) {
+    value = minRes;
+  }
+  RESOLUTION = value;
+
+  ROWS = canvas.height / RESOLUTION;
+  COLUMNS = canvas.width / RESOLUTION;
+
+  GRID = initGrid();
+  draw(GRID);
+}
+function setCanvasHeight(value) {
+  if (value < minHeight) {
+    value = minHeight;
+  }
+  canvas.height = value;
+
+  ROWS = canvas.height / RESOLUTION;
+  COLUMNS = canvas.width / RESOLUTION;
+
+  GRID = initGrid();
+  draw(GRID);
+}
+function setCanvasWidth(value) {
+  if (value < minWidth) {
+    value = minWidth;
+  }
+  canvas.width = value;
+
+  ROWS = canvas.height / RESOLUTION;
+  COLUMNS = canvas.width / RESOLUTION;
+
+  GRID = initGrid();
+  draw(GRID);
 }
 
 // ---------- OUTPUT ----------

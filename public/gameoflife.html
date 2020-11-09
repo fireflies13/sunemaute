@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/gameOfLife/game.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
+
+    <title>Game of Life</title>
+  </head>
+  <body>
+
+    <h1>Conway's Game of Life</h1>
+
+
+      <canvas id="golBoard"></canvas>
+
+
+      <div id="menuWrapper">
+
+        <p id="infoText">Click on a cell to toggle it live/dead.</p>
+
+        <button type="button" id="clearButton" onclick="clearGame()">Clear</button>
+        <a id="rulesLink" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank"><i class="fa fa-question-circle" title="help"></i></a>
+        <span id="runCheck">
+          <label for="runCheckbox">
+            Run:
+            <input type="checkbox" id="runCheckbox"/>
+          </label>
+        </span>
+
+
+        <br>
+        <br>
+        <div class="settingsWrapper">
+
+        <div id="freqBox">
+          <label for="tickFrequency">
+            Cycle frequency in ms:
+            <input type="number" id="tickFrequency" min="100" placeholder="500" max="10000" onchange="setTickLength(this.value)"/>
+          </label>
+        </div>
+
+        <div id="resBox">
+          <label for="resolution">
+            Resolution:
+            <input type="number" id="resolution" min="6" max="1000" placeholder="20" max="10000" onchange="setResolution(this.value)"/>
+          </label>
+        </div>
+
+        <div id="rowBox">
+          <label for="rowAmount">
+            Board height:
+            <input type="number" id="rowAmount" min="100" placeholder="600" max="2000" onchange="setCanvasHeight(this.value)"/>
+          </label>
+        </div>
+
+        <div id="colBox">
+          <label for="colAmount">
+            Board width:
+            <input type="number" id="colAmount" min="100" placeholder="800" max="2000" onchange="setCanvasWidth(this.value)"/>
+          </label>
+        </div>
+
+        <p><i class="fa fa-exclamation-triangle" style="color: orange;"></i> height/res and width/res cannot have remainder!</p>
+
+
+      </div>
+
+
+
+      </div>
+
+
+
+
+    <script src="/gameOfLife/game.js"></script>
+
+  </body>
+</html>
