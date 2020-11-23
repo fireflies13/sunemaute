@@ -4,5 +4,7 @@
 }
 body{
   background-image: url(xmas-background.jpeg);
-  
+  min-height:900px;
+  background-size: cover;
+  position:absolute;
 }

@@ -225,6 +225,7 @@ function gameTick() {
     for (var ii = 0; ii < GRID[i].length; ii++) {
       GRID[i][ii] = nextGenGrid[i][ii];
     }
+  }
 
     draw(GRID);
 
@@ -242,3 +243,4 @@ function gameTick() {
     setTimeout(function() {
       gameLoop(runBox);
     }, tickLength);
+}
