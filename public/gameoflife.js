@@ -115,8 +115,8 @@ function drawCell(color, x, y, width, height){
 function draw(grid) {
   // draw a grid
   // start with 2 to make seem endlessly
-  for (let row = 2; row < grid.length; row++){
-    for (let col = 2; col < grid[row].length; col++) {
+  for (let row = 2; row < grid.length-2; row++){
+    for (let col = 2; col < grid[row].length-2; col++) {
       let cell = grid[row][col];
 
       // fill cell according to state
@@ -189,8 +189,8 @@ function getNextGenGrid() {
 
   let nextGenGrid = copyBoard(GRID);
 
-  for (var row = 0; row < GRID.length-2; row++){
-    for (var col = 0; col < GRID[row].length-2; col++) {
+  for (var row = 0; row < GRID.length; row++){
+    for (var col = 0; col < GRID[row].length; col++) {
       let cell = nextGenGrid[row][col];
 
       let neighbours = getNeighbourAmount(row, col)
