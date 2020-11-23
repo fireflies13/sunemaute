@@ -1,246 +1,32 @@
-const canvas = document.getElementById('golBoard');
-const ctx = canvas.getContext('2d');
-canvas.width = 800;
-canvas.height = 600;
-var minHeight = 100;
-var minWidth = 100;
-canvas.addEventListener('mousedown', function(e)
-{
-  handleCanvasClick(this, e);
-});
+function buildSlideShow(id, columns) {
+  var outerScaffoldBegin = "<div class='carousel-inner'>";
+  var outerScaffoldEnd = "</div></div><div class='control-box'>
+      <a data-slide='prev' href='#myCarousel' class='carousel-control left' onclick='pauseCarousel('myCarousel')'>‹</a>
+      <a data-slide='next' href='#myCarousel' class='carousel-control right' onclick='pauseCarousel('myCarousel')'>›</a>";
+  var innerScaffoldBegin = "<div class='item'><ul class='thumbnailWrapper'>";
+  var innerScaffoldEnd = "</ul></div>";
+  var itemBegin = "<li class='span3'><a class='thumbnail'";
+  var itemEnd = "</a></li>";
 
-var RESOLUTION = 20;
-var minRes = 5;
+  let slidesAmount =  Math.ceil(hinweisItems.length/columns);
+  let elementCounter = 0;
 
-var ROWS = canvas.height / RESOLUTION;
-var COLUMNS = canvas.width / RESOLUTION;
+  var fullString = outerScaffoldBegin;
 
+  for (var i = 0; i < slidesAmount; i++) {
 
-const runBox = document.getElementById('runCheckbox');
-runBox.addEventListener('change', function(e)
-{
-  if (this.checked) {
-    gameLoop(this);
-  }
-});
-var tickLength = 500;
+    if (elementCounter == 0) {fullString = fullString.concat("<div class='item active'><ul class='thumbnailWrapper'>");}
+    else {fullString = fullString.concat(innerScaffoldBegin);}
 
+    for (var ii = 0; ii < columns; ii++) {
+      // skip null-elements
+      if (hinweisItems[elementCounter] == null) {continue;}
+      fullString = fullString.concat(itemBegin, "href='",hinweisItems[elementCounter][0],"'>")
+      fullString = fullString.concat('<h2>',hinweisItems[elementCounter][3],'</h2>')
+      fullString = fullString.concat('<h3>',hinweisItems[elementCounter][1],'</h3>')
+      fullString = fullString.concat('<p>',hinweisItems[elementCounter][2],'</p>')
+      fullString = fullString.concat('<span>','Details','</span>')
 
-
-// --- MAIN ---
-var GRID = initGrid();
-console.log(GRID);
-
-draw(GRID);
-
-
-// ---------- INPUT ----------
-function handleCanvasClick(canvas, event) {
-  let rect = canvas.getBoundingClientRect();
-  let x = event.clientX - rect.left;
-  let y = event.clientY - rect.top;
-
-  let row = Math.floor(y / RESOLUTION);
-  let col = Math.floor(x / RESOLUTION);
-
-  // toggle cell state
-  GRID[row][col] = !GRID[row][col];
-
-  draw(GRID);
-}
-
-function clearGame() {
-  // set all elements in GRID-Array to false
-  for (let row = 0; row < GRID.length; row++){
-    for (let col = 0; col < GRID[row].length; col++) {
-      GRID[row][col] = false;
+      fullString = fullString.concat(itemEnd)
+      elementCounter += 1;
     }
-  }
-  draw(GRID);
-
-  console.clear();
-}
-
-function setTickLength(value) {
-  tickLength = value;
-}
-function setResolution(value) {
-  if (value < minRes) {
-    value = minRes;
-  }
-  RESOLUTION = value;
-
-  ROWS = canvas.height / RESOLUTION;
-  COLUMNS = canvas.width / RESOLUTION;
-
-  GRID = initGrid();
-  draw(GRID);
-}
-function setCanvasHeight(value) {
-  if (value < minHeight) {
-    value = minHeight;
-  }
-  canvas.height = value;
-
-  ROWS = canvas.height / RESOLUTION;
-  COLUMNS = canvas.width / RESOLUTION;
-
-  GRID = initGrid();
-  draw(GRID);
-}
-function setCanvasWidth(value) {
-  if (value < minWidth) {
-    value = minWidth;
-  }
-  canvas.width = value;
-
-  ROWS = canvas.height / RESOLUTION;
-  COLUMNS = canvas.width / RESOLUTION;
-
-  GRID = initGrid();
-  draw(GRID);
-}
-
-// ---------- OUTPUT ----------
-function drawCell(color, x, y, width, height){
-  // draw a cell
-  ctx.beginPath();
-  ctx.fillStyle = color;
-  ctx.strokeStyle = "#ccc";
-  ctx.rect(x, y, width, height);
-  ctx.stroke();
-  ctx.fill();
-}
-
-function draw(grid) {
-  // draw a grid
-  for (let row = 0; row < grid.length; row++){
-    for (let col = 0; col < grid[row].length; col++) {
-      let cell = grid[row][col];
-
-      // fill cell according to state
-      let color = (cell)? "#333" : "#fff";
-
-      drawCell(color, col * RESOLUTION, row * RESOLUTION, RESOLUTION, RESOLUTION);
-
-    }
-  }
-}
-
-
-
-// ---------- LOGIC ----------
-
-function getNeighbourAmount(row,col) {
-  let amount = 0;
-
-  for (var i = 0; i < 3; i++){
-    let iRow = row-1 + i;
-    // check if row is in board
-    if (iRow >= 0 && iRow < ROWS) {
-      for (var ii = 0; ii < 3; ii++) {
-        let iCol = col-1 + ii;
-        // check if column is in board
-        if (iCol >= 0 && iCol < COLUMNS) {
-          // increment neightbour amount if not self (self: i = ii = 1)
-          if (GRID[iRow][iCol] && !(i == 1 && ii == 1)) {
-            amount += 1;
-          }
-
-        }
-      }
-    }
-  }
-
-  return amount;
-
-}
-
-
-// ---------- GENERAL ----------
-function initGrid() {
-  let grid = new Array(ROWS).fill(null);
-
-  for (var i = 0; i < grid.length; i++) {
-    grid[i] = new Array(COLUMNS).fill(false);
-  }
-  return grid;
-}
-
-// return deep copy of Array[][]
-function copyBoard(sourceBoard) {
-  let newBoard = new Array(sourceBoard.length).fill(null);
-  for (var i = 0; i < sourceBoard.length; i++) {
-    newBoard[i] = new Array(sourceBoard[i].length).fill(false);
-  }
-
-
-  for (var i = 0; i < sourceBoard.length; i++) {
-    for (var ii = 0; ii < sourceBoard[i].length; ii++) {
-      newBoard[i][ii] = sourceBoard[i][ii];
-    }
-  }
-
-  return newBoard;
-}
-
-function getNextGenGrid() {
-
-  let nextGenGrid = copyBoard(GRID);
-
-  for (var row = 0; row < GRID.length; row++){
-    for (var col = 0; col < GRID[row].length; col++) {
-      let cell = nextGenGrid[row][col];
-
-      let neighbours = getNeighbourAmount(row, col)
-
-      // if (cell) {
-      //   console.log("ROW:",row, "COL:",col, " - ADJACENT:", neighbours);
-      // }
-
-      // 1. Any live cell with fewer than two live neighbours dies.
-      // 2. Any live cell with more than three live neighbours dies
-      if ((neighbours < 2) || (neighbours > 3)) {
-        nextGenGrid[row][col] = false;
-      }
-      // 4. Any dead cell with exactly three live neighbours becomes a live cell.
-      else if (neighbours == 3) {
-        nextGenGrid[row][col] = true;
-      }
-
-    }
-  }
-
-  return nextGenGrid;
-
-}
-
-function gameTick() {
-  // emulate grid of next generation
-  let nextGenGrid = getNextGenGrid();
-
-  // overwrite current board with next generation grid
-  for (var i = 0; i < GRID.length; i++) {
-    for (var ii = 0; ii < GRID[i].length; ii++) {
-      GRID[i][ii] = nextGenGrid[i][ii];
-    }
-  }
-
-  draw(GRID);
-
-}
-
-function gameLoop(runBox) {
-  // end loop when runBox unchecked
-  if (!runBox.checked){
-    return;
-  }
-
-  gameTick();
-
-  // loop on after n=tickLength many seconds
-  setTimeout(function() {
-    gameLoop(runBox);
-  }, tickLength);
-
-}
