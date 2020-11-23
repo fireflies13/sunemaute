@@ -189,8 +189,8 @@ function getNextGenGrid() {
 
   let nextGenGrid = copyBoard(GRID);
 
-  for (var row = 0; row < GRID.length; row++){
-    for (var col = 0; col < GRID[row].length; col++) {
+  for (var row = 0; row < GRID.length-2; row++){
+    for (var col = 0; col < GRID[row].length-2; col++) {
       let cell = nextGenGrid[row][col];
 
       let neighbours = getNeighbourAmount(row, col)
