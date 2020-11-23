@@ -224,3 +224,21 @@ function gameTick() {
   for (var i = 0; i < GRID.length; i++) {
     for (var ii = 0; ii < GRID[i].length; ii++) {
       GRID[i][ii] = nextGenGrid[i][ii];
+    }
+
+    draw(GRID);
+
+  }
+
+  function gameLoop(runBox) {
+    // end loop when runBox unchecked
+    if (!runBox.checked){
+      return;
+    }
+
+    gameTick();
+
+    // loop on after n=tickLength many seconds
+    setTimeout(function() {
+      gameLoop(runBox);
+    }, tickLength);
