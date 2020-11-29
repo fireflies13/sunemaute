@@ -54,7 +54,7 @@ font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f005 ";
   padding-bottom: 120px;
   text-align: center;
   border: 1px solid #ecf0f3;
-  border-bottom: 0;
+  /* border-bottom: 0; */
 }
 .adventsBoxWrapper{
   width: 90%;
