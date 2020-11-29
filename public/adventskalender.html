@@ -2,25 +2,344 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="adventskalender.css">
+    <link rel="stylesheet" href="/adventskalender.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
+    <!-- jQuery 3.4.1 library -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <title></title>
   </head>
   <body>
 
-    <h1>Digitaler Adventskalender Mila-Version</h1>
-
     <div class="backgroundWrapper">
 
-    <div class="adventsBoxWrapper">
 
-      <div class="TagBox">
+      <div class="backgroundImage">
+        <!-- <br>
+        <br> -->
+      <div class="contentWrapper">
+        <br>
+        <br>
+        <span id="firstStarHeader">&#9733;</span>
+        <span id="secondStarHeader">&#9734;</span>
+        <h1>Digitaler Adventskalender </h1>
+        <span id="thirdStarHeader">&#9734;</span>
+        <span id="fourthStarHeader">&#9733;</span>
+
+        <br>
+        <br>
+
+      <ul class="adventsBoxWrapper">
+
+      <!-- <li class="TagBox ersteReihe revealedDay" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>1</span>
+          </div>
+          <div class="back">
+            <img src="Bilder/selected/01_urgrosseltern_mila.jpg" title="Urgroßeltern Lutz Christina">
+          </div>
+        </div>
+      </li> -->
+      <li class="TagBox ersteReihe" id="activeDay" style="background-color: transparent;">
+        <div class="card" id="activeCard">
+          <div class="front">
+            <span>1</span>
+          </div>
+          <div class="back">
+            <img src="fields-greyshape.jpg" title="Feld Grau">
+          </div>
+        </div>
+      </li>
 
 
-      </div>
+      <li class="TagBox ersteReihe" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>2</span>
+          </div>
+          <div class="back">
+            <img src="Bilder/selected/02_oma_omi_mila.jpg" title="Oma Mila Omi">
+          </div>
+        </div>
+      </li>
 
-    </div>
+      <li class="TagBox ersteReihe" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>3</span>
+          </div>
+          <div class="back">
+            <img src="Bilder/selected/03_julius2_mila.jpg" title="Julius Mila">
+          </div>
+        </div>
+      </li>
 
+      <li class="TagBox zweiteReihe" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>4</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox zweiteReihe" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>5</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox zweiteReihe" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>6</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>7</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>8</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>9</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>10</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>11</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>12</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>13</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>14</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>15</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox vorvorletzteReihe" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>16</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox vorvorletzteReihe" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>17</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox vorvorletzteReihe" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>18</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox vorletzteReihe" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>19</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox vorletzteReihe" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>20</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox vorletzteReihe" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>21</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox letzteReihe" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>22</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox letzteReihe" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>23</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="TagBox letzteReihe" style="background-color: transparent;">
+        <div class="card">
+          <div class="front">
+            <span>24</span>
+          </div>
+          <div class="back">
+            <img src="photo_2020-06-07_13-36-55.jpg" alt="">
+          </div>
+        </div>
+      </li>
+
+
+
+    </ul>
   </div>
 
+
+      <img class="footerImage" src="xmas-background-cropped.jpeg" alt="">
+
+
+
+    </div>
+</div>
+
+
   </body>
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+      console.log("inJQ");
+
+      $("#activeCard").flip();
+
+    });
+
+
+
+// Gras, Waldweg, SChotter, Laub,
+
+
+  </script>
+
+  <style media="screen">
+
+  </style>
 </html>

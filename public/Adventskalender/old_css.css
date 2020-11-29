@@ -68,13 +68,13 @@ font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f005 ";
 .TagBox{
   position: relative;
 
-  /* padding-top: 80px; */
-  border: 2px dashed transparent;
-  border-radius: 20px;
+  padding-top: 80px;
+  border: 2px dashed #ecf0f3;
+  border-radius: 10px;
   width: calc(33.33% - 28px);
-  height:240px;
+  height:200px;
   margin:10px;
-  background-color: transparent;
+  background-color: #556B2F;
   text-align:center;
   color: #ecf0f3;
   font-size: 100px;
@@ -84,62 +84,88 @@ font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f005 ";
   transition: all 200ms ease;
   -webkit-transition: all 200ms ease;
 }
-.ersteReihe{
-  color: yellow;
-}
-.zweiteReihe{
-  color: #FFFF66;
-}
-.vorvorletzteReihe{
-  color: MediumSlateBlue;
-}
-.vorletzteReihe{
-  color: DarkSlateBlue;
-}
-.letzteReihe{
-  color: midnightblue;
-}
 .TagBox:hover{
-  text-shadow: 1px 1px 10px white;
+  text-shadow: 1px 1px 20px white;
   cursor: pointer;
   background-color: #44552F;
-  border: 2px dashed;
 }
-.ersteReihe:hover{
-  text-shadow:1px 1px 10px yellow;
-}
-.zweiteReihe:hover{
-  text-shadow:1px 1px 10px #FFFF66;
-}
-.vorvorletzteReihe:hover{
-  text-shadow:1px 1px 10px MediumSlateBlue;
-}
-.vorletzteReihe:hover{
-  text-shadow:1px 1px 10px DarkSlateBlue;
-}
-.letzteReihe:hover{
-  text-shadow:1px 1px 10px midnightblue;
+.tuerchen::after{
+/* font-family: "Font Awesome 5 Free"; font-weight: 900; content: " \f1bb"; */
 }
 
-.back{
-  width:100%;
-  height:100%;
+.advBild, .tuerchen{
+  display:block;
+  position:absolute;
+
+  /* padding: 5px; */
+
 }
-.back img{
-  max-width: 100%;
-  max-height: 100%;
+.advBild{
+  z-index:2;
+  height:calc(80% - 4px);
+  width:calc(80% - 4px);
+  background-color: #556B2F;
+  /* padding:5px; */
+  border: 2px solid lightyellow;
+
+  top:10%;
+  left:10%;
 }
-.revealedDay .front span{
-  display: none;
+.tuerchen{
+  /* background-color: #556B2F; */
+  background-color: transparent;
+  overflow:hidden;
+
+  z-index:3;
+  padding-top: 16%;
+
+  width:80%;
+
+  top:10%;
+  bottom:10%;
+  left:10%;
+
+  -moz-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
 }
-.TagBox .back img{
-  display: none;
+.leftDoor{
+  position:absolute;
+  left:0;
+  top:0;
+  width:50%;
+  height: calc(80% - 2px);
+  /* background-color: #331a00; */
+  border: 5px solid #0000b3;
+  padding-top: 16%;
+
+  background: repeating-linear-gradient(
+  -45deg,
+  #cc0000,
+  #cc0000 10px,
+  white 10px,
+  white 20px
+);
+
 }
-.revealedDay{
-  border:2px dashed #ecf0f3;
-}
-.revealedDay .back img, #activeDay .back img{
-  display: block;
+.rightDoor{
+  position:absolute;
+  right:0;
+  top:0;
+  width:50%;
+  height: calc(80% - 2px);
+  /* background-color: #331a00; */
+  border: 5px solid #0000b3;
+  padding-top: 16%;
+
+  background: repeating-linear-gradient(
+  45deg,
+  #cc0000,
+  #cc0000 10px,
+  white 10px,
+  white 20px
+  );
 }
 
 
@@ -189,27 +215,7 @@ font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f005 ";
 
 
 
-.card{
-  height: 100%;
-}
 
-.front{
-  position: absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100;
-  font-family: 'Mountains of Christmas', cursive;
-}
-.front span{
-  line-height: 240px;
-}
-
-.back img{
-  width:100%;
-  height:100%;
-  border-radius: 20px;
-}
 
 .footerImage{
   width: calc(100% - 2px);
