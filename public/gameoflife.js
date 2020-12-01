@@ -115,8 +115,8 @@ function drawCell(color, x, y, width, height){
 function draw(grid) {
   // draw a grid
   // start with 2 to make seem endlessly
-  for (let row = 2; row < grid.length-2; row++){
-    for (let col = 2; col < grid[row].length-2; col++) {
+  for (let row = 0; row < grid.length; row++){
+    for (let col = 0; col < grid[row].length; col++) {
       let cell = grid[row][col];
 
       // fill cell according to state
