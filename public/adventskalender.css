@@ -1,0 +1,232 @@
+body{
+  margin: 0;
+}
+.backgroundWrapper{
+  background-color: #55222F;
+  background-image: linear-gradient(black, brown);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.backgroundImage{
+  position:relative;
+  margin: 20px auto;
+  max-width: 1200px;
+  /* box-shadow: 10px 10px 10px #ecf0f3; */
+  padding: 0px;
+  /* border: 2px solid #ecf0f3; */
+  /* border-bottom: 0; */
+}
+
+h1{
+  font-family: 'Mountains of Christmas', cursive;
+  color: #ecf0f3;
+  text-align: center;
+  font-size: 60px;
+  /* border: 1px solid; */
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 2px;
+  color: yellow;
+  text-shadow: 0 0 4px white;
+}
+#firstStarHeader, #fourthStarHeader{
+  color: yellow;
+  text-shadow: 0 0 10px white;
+  font-size: 90px;
+}
+#secondStarHeader, #thirdStarHeader{
+  color: yellow;
+  text-shadow: 0 0 10px white;
+  font-size: 40px;
+}
+
+/* h1::before{
+font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f005 ";
+} */
+.contentWrapper{
+  background-color: midnightblue;
+  background-image: linear-gradient(midnightblue, #ecf0f3);
+
+  /* padding-bottom: 440px; */
+  padding-bottom: 120px;
+  text-align: center;
+  border: 1px solid #ecf0f3;
+  /* border-bottom: 0; */
+}
+.adventsBoxWrapper{
+  width: 90%;
+  margin: 0px auto;
+  display:flex;
+  flex-wrap: wrap;
+  padding: 0px;
+  list-style-type: none;
+
+}
+.TagBox{
+  position: relative;
+
+  /* padding-top: 80px; */
+  border: 2px dashed transparent;
+  border-radius: 20px;
+  width: calc(33.33% - 28px);
+  height:240px;
+  margin:10px;
+  background-color: transparent;
+  text-align:center;
+  color: #ecf0f3;
+  font-size: 100px;
+
+  -moz-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+}
+.ersteReihe{
+  color: yellow;
+}
+.zweiteReihe{
+  color: #FFFF66;
+}
+.vorvorletzteReihe{
+  color: MediumSlateBlue;
+}
+.vorletzteReihe{
+  color: DarkSlateBlue;
+}
+.letzteReihe{
+  color: midnightblue;
+}
+.TagBox:hover{
+  text-shadow: 1px 1px 10px white;
+  cursor: pointer;
+  background-color: #44552F;
+  border: 2px dashed;
+}
+.ersteReihe:hover{
+  text-shadow:1px 1px 10px yellow;
+}
+.zweiteReihe:hover{
+  text-shadow:1px 1px 10px #FFFF66;
+}
+.vorvorletzteReihe:hover{
+  text-shadow:1px 1px 10px MediumSlateBlue;
+}
+.vorletzteReihe:hover{
+  text-shadow:1px 1px 10px DarkSlateBlue;
+}
+.letzteReihe:hover{
+  text-shadow:1px 1px 10px midnightblue;
+}
+
+.back{
+  width:100%;
+  height:100%;
+}
+.back img{
+  max-width: 100%;
+  max-height: 100%;
+}
+.revealedDay .front span{
+  display: none;
+}
+.TagBox .back img{
+  display: none;
+}
+.revealedDay{
+  border:2px dashed #ecf0f3;
+}
+.revealedDay .back img, #activeDay .back img{
+  display: block;
+}
+
+
+
+
+
+
+.card{
+  height: 100%;
+}
+
+.front{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100;
+  font-family: 'Mountains of Christmas', cursive;
+}
+.front span{
+  line-height: 240px;
+}
+
+.back img{
+  width:100%;
+  height:100%;
+  border-radius: 20px;
+}
+
+.footerImage{
+  width: calc(100% - 2px);
+  /* position:absolute; */ */
+  margin:0px auto;
+  border:1px solid #ecf0f3;
+  /* bottom: 0; */
+  max-width: 100%;
+  /* box-shadow: 4px 4px 10px #ecf0f3; */
+}
+
+@media (max-width:1200px) {
+  .backgroundImage{
+    margin: 0px auto;
+    border: 0;
+  }
+  .footerImage{
+    /* position:absolute;
+    border:0;
+    bottom:0; */
+  }
+}
+
+@media (max-width: 1000px) {
+  .TagBox{
+    width: calc(50% - 26px);
+  }
+  .contentWrapper{
+    /* padding-bottom: 360px; */
+  }
+  #secondStarHeader, #thirdStarHeader{
+    display: none;
+  }
+  .footerImage{
+
+    border: none;
+    width: 100%;
+  }
+  .contentWrapper {
+    border: none;
+  }
+  /* .backgroundImage{
+    margin: 0px auto;
+  } */
+}
+@media (max-width: 813px) {
+  h1{
+    font-size: 11vw;
+    margin: 0px;
+  }
+  #fourthStarHeader:after{
+    /* content:"\A "; */
+  }
+}
+@media (max-width: 700px) {
+  .TagBox{
+    width: calc(100% - 24px);
+  }
+  /* .backgroundImage{
+    margin: 0px auto;
+  } */
+}
