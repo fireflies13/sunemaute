@@ -177,7 +177,7 @@ font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f005 ";
 }
 .impressum {
   position: absolute;
-  bottom: 0;
+  bottom: 12px;
   left: 50%;
 }
 .impressum .impressumsLink {
