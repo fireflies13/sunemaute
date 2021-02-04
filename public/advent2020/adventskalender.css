@@ -1,8 +1,8 @@
-body{
+body {
   margin: 0;
 }
-.backgroundWrapper{
-  background-color: #55222F;
+.backgroundWrapper {
+  background-color: #55222f;
   background-image: linear-gradient(black, brown);
 
   position: absolute;
@@ -10,8 +10,8 @@ body{
   left: 0;
   right: 0;
 }
-.backgroundImage{
-  position:relative;
+.backgroundImage {
+  position: relative;
   margin: 20px auto;
   max-width: 1200px;
   /* box-shadow: 10px 10px 10px #ecf0f3; */
@@ -20,8 +20,8 @@ body{
   /* border-bottom: 0; */
 }
 
-h1{
-  font-family: 'Mountains of Christmas', cursive;
+h1 {
+  font-family: "Mountains of Christmas", cursive;
   color: #ecf0f3;
   text-align: center;
   font-size: 60px;
@@ -32,12 +32,14 @@ h1{
   color: yellow;
   text-shadow: 0 0 4px white;
 }
-#firstStarHeader, #fourthStarHeader{
+#firstStarHeader,
+#fourthStarHeader {
   color: yellow;
   text-shadow: 0 0 10px white;
   font-size: 90px;
 }
-#secondStarHeader, #thirdStarHeader{
+#secondStarHeader,
+#thirdStarHeader {
   color: yellow;
   text-shadow: 0 0 10px white;
   font-size: 40px;
@@ -46,7 +48,7 @@ h1{
 /* h1::before{
 font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f005 ";
 } */
-.contentWrapper{
+.contentWrapper {
   background-color: midnightblue;
   background-image: linear-gradient(midnightblue, #ecf0f3);
 
@@ -56,26 +58,25 @@ font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f005 ";
   border: 1px solid #ecf0f3;
   /* border-bottom: 0; */
 }
-.adventsBoxWrapper{
+.adventsBoxWrapper {
   width: 90%;
   margin: 0px auto;
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   padding: 0px;
   list-style-type: none;
-
 }
-.TagBox{
+.TagBox {
   position: relative;
 
   /* padding-top: 80px; */
   border: 2px dashed transparent;
   border-radius: 20px;
   width: calc(33.33% - 28px);
-  height:240px;
-  margin:10px;
+  height: 240px;
+  margin: 10px;
   background-color: transparent;
-  text-align:center;
+  text-align: center;
   color: #ecf0f3;
   font-size: 100px;
 
@@ -84,107 +85,112 @@ font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f005 ";
   transition: all 200ms ease;
   -webkit-transition: all 200ms ease;
 }
-.ersteReihe{
+.ersteReihe {
   color: yellow;
 }
-.zweiteReihe{
-  color: #FFFF66;
+.zweiteReihe {
+  color: #ffff66;
 }
-.vorvorletzteReihe{
+.vorvorletzteReihe {
   color: MediumSlateBlue;
 }
-.vorletzteReihe{
+.vorletzteReihe {
   color: DarkSlateBlue;
 }
-.letzteReihe{
+.letzteReihe {
   color: midnightblue;
 }
-.TagBox:hover{
+.TagBox:hover {
   text-shadow: 1px 1px 10px white;
   cursor: pointer;
-  background-color: #44552F;
+  background-color: #44552f;
   border: 2px dashed;
 }
-.ersteReihe:hover{
-  text-shadow:1px 1px 10px yellow;
+.ersteReihe:hover {
+  text-shadow: 1px 1px 10px yellow;
 }
-.zweiteReihe:hover{
-  text-shadow:1px 1px 10px #FFFF66;
+.zweiteReihe:hover {
+  text-shadow: 1px 1px 10px #ffff66;
 }
-.vorvorletzteReihe:hover{
-  text-shadow:1px 1px 10px MediumSlateBlue;
+.vorvorletzteReihe:hover {
+  text-shadow: 1px 1px 10px MediumSlateBlue;
 }
-.vorletzteReihe:hover{
-  text-shadow:1px 1px 10px DarkSlateBlue;
+.vorletzteReihe:hover {
+  text-shadow: 1px 1px 10px DarkSlateBlue;
 }
-.letzteReihe:hover{
-  text-shadow:1px 1px 10px midnightblue;
+.letzteReihe:hover {
+  text-shadow: 1px 1px 10px midnightblue;
 }
 
-.back{
-  width:100%;
-  height:100%;
+.back {
+  width: 100%;
+  height: 100%;
 }
-.back img{
+.back img {
   max-width: 100%;
   max-height: 100%;
 }
-.revealedDay .front span{
+.revealedDay .front span {
   display: none;
 }
-.TagBox .back img{
+.TagBox .back img {
   display: none;
 }
-.revealedDay{
-  border:2px dashed #ecf0f3;
+.revealedDay {
+  border: 2px dashed #ecf0f3;
 }
-.revealedDay .back img, #activeDay .back img{
+.revealedDay .back img,
+#activeDay .back img {
   display: block;
 }
 
-
-
-
-
-
-.card{
+.card {
   height: 100%;
 }
 
-.front{
+.front {
   position: absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100;
-  font-family: 'Mountains of Christmas', cursive;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100;
+  font-family: "Mountains of Christmas", cursive;
 }
-.front span{
+.front span {
   line-height: 240px;
 }
 
-.back img{
-  width:100%;
-  height:100%;
+.back img {
+  width: 100%;
+  height: 100%;
   border-radius: 20px;
 }
 
-.footerImage{
+.footerImage {
   width: calc(100% - 2px);
-  /* position:absolute; */ */
-  margin:0px auto;
-  border:1px solid #ecf0f3;
+  /* position:absolute; */
+  margin: 0px auto;
+  border: 1px solid #ecf0f3;
   /* bottom: 0; */
   max-width: 100%;
   /* box-shadow: 4px 4px 10px #ecf0f3; */
 }
+.impressum {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+.impressum .impressumsLink {
+  position: relative;
+  left: -50%;
+}
 
-@media (max-width:1200px) {
-  .backgroundImage{
+@media (max-width: 1200px) {
+  .backgroundImage {
     margin: 0px auto;
     border: 0;
   }
-  .footerImage{
+  .footerImage {
     /* position:absolute;
     border:0;
     bottom:0; */
@@ -192,17 +198,17 @@ font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f005 ";
 }
 
 @media (max-width: 1000px) {
-  .TagBox{
+  .TagBox {
     width: calc(50% - 26px);
   }
-  .contentWrapper{
+  .contentWrapper {
     /* padding-bottom: 360px; */
   }
-  #secondStarHeader, #thirdStarHeader{
+  #secondStarHeader,
+  #thirdStarHeader {
     display: none;
   }
-  .footerImage{
-
+  .footerImage {
     border: none;
     width: 100%;
   }
@@ -214,16 +220,16 @@ font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f005 ";
   } */
 }
 @media (max-width: 813px) {
-  h1{
+  h1 {
     font-size: 11vw;
     margin: 0px;
   }
-  #fourthStarHeader:after{
+  #fourthStarHeader:after {
     /* content:"\A "; */
   }
 }
 @media (max-width: 700px) {
-  .TagBox{
+  .TagBox {
     width: calc(100% - 24px);
   }
   /* .backgroundImage{
