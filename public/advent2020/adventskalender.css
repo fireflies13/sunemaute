@@ -184,7 +184,7 @@ font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f005 ";
   position: relative;
   left: -50%;
   font-family: "Mountains of Christmas", cursive;
-  color: #fff;
+  color: midnightblue;
 }
 
 @media (max-width: 1200px) {
